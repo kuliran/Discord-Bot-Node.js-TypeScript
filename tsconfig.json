@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "noImplicitAny": true,
+    "declaration": false,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      // Creating a custom `@` reference so that way complied .js files have access to the absolute path of their folder
+      // Combined with _moduleAliases in package.json
+      "@/*": ["src/*"],
+      "@initHandler": ["src/initHandler/main.ts"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

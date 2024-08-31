@@ -1,0 +1,29 @@
+Discord Bot setup + custom Event/SlashCommand handler
+
+kuliran 08.31.2024
+Learning Typescript and Node.js for the first time
+
+The package (initHandler) allows to organize command and event modules under different folders that describe separate systems
+rather than putting every module inside single "commands" and "events" folders, which can make it hard to edit specific systems (in the case of a multifunctional bot)
+
+It also uses `.env` module to keep the sensitive info protected from getting leaked on GitHub (with .gitignore file) 
+
+Hierarchy example (in src folder):
+    systems (folder)
+
+        levelling (folder)
+            commands (folder)
+                getExp (file)
+            events (folder)
+                messageCreate (folder)
+                    giveExp (file)
+
+        welcomeMessage (folder)
+            commands (folder)
+                configure-channel (file)
+                remove-channel (file)
+            events (folder)
+                memberAdded (folder)
+                    printWelcomeMessage (file)
+
+PS: I also wanted to handle the systems provided in the example, but MongoDB just didn't want me to sign up. Hence why no database :/
