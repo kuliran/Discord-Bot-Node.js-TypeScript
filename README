@@ -25,5 +25,3 @@ Hierarchy example (in src folder):
             events (folder)
                 memberAdded (folder)
                     printWelcomeMessage (file)
-
-PS: I also wanted to handle the systems provided in the example, but MongoDB just didn't want me to sign up. Hence why no database :/
